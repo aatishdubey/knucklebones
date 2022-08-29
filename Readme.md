@@ -2,7 +2,7 @@
 
 This repo is a dice game inspired by a mini-game called "Knucklebones" in the 2022 video game titled Cult of the Lamb.
 
-# Start the dev server
+## Start the dev server
 
 <code>yarn run dev</code>
 
