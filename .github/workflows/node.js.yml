@@ -27,7 +27,6 @@ jobs:
           cache: "yarn"
       - run: yarn install --frozen-lockfile
       - run: yarn build
-      - name: Push to deployment branch
       - run: git add docs
       - run: git config --global user.email "atsh_dubey@live.com"
       - run: git config -- global user.name "Github Actions"
