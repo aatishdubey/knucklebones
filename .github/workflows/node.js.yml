@@ -27,7 +27,11 @@ jobs:
           cache: "yarn"
       - run: yarn install --frozen-lockfile
       - run: yarn build
+      - uses: actions/checkout@v3
+      - name: Push to deployment branch
       - run: git add docs
+      - run: git config --global user.email "atsh_dubey@live.com"
+      - run: git config -- global user.name "Github Actions"
       - run: git commit -m "Build for gh pages deployment"
       - run: git checkout -b deployment
       - run: git remote add origin git@github.com:aatishdubey/knucklebones.git
