@@ -32,5 +32,4 @@ jobs:
       - run: git config --global user.name "Github Actions"
       - run: git commit -m "Build for gh pages deployment"
       - run: git checkout -b deployment
-      - run: git remote add origin git@github.com:aatishdubey/knucklebones.git
       - run: git push origin deployment
