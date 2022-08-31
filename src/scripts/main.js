@@ -14,11 +14,7 @@ export function calcScores(player1Squares, player2Squares) {
       }
     }
     Object.keys(count).forEach((key) => {
-      total =
-        total +
-        (key === "1"
-          ? parseInt(key) * count[key]
-          : Math.pow(parseInt(key), count[key]));
+      total = total + parseInt(key) * count[key];
     });
     player1[i] = total;
   }
@@ -35,11 +31,7 @@ export function calcScores(player1Squares, player2Squares) {
       }
     }
     Object.keys(count).forEach((key) => {
-      total =
-        total +
-        (key === "1"
-          ? parseInt(key) * count[key]
-          : Math.pow(parseInt(key), count[key]));
+      total = total + parseInt(key) * count[key];
     });
     player2[i] = total;
   }
