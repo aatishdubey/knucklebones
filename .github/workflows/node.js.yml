@@ -29,6 +29,7 @@ jobs:
       - run: git config --global user.email "atsh_dubey@live.com"
       - run: git config --global user.name "Github Actions"
       - run: git config pull.rebase false
+      - run: git pull
       - run: git checkout -b deployment
       - name: Pull from Deployment
         continue-on-error: true
