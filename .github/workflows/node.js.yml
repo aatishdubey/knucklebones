@@ -37,5 +37,7 @@ jobs:
       - run: rm -rf ./docs
       - run: yarn build
       - run: git add docs
-      - run: git commit -m "Build for gh pages deployment"
+      - name: Commit new build to deployment
+        continue-on-error: true
+        run: git commit -m "Build for gh pages deployment"
       - run: git push origin deployment
