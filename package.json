@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/knuclebones/",
+    "build": "vite build --base=/knucklebones/",
     "preview": "vite preview"
   },
   "dependencies": {
