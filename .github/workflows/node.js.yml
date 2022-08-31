@@ -29,7 +29,9 @@ jobs:
       - run: git config pull.rebase false
       - run: git pull
       - run: git checkout deployment
-      - run: git merge main
+      - run: git merge main --no-commit
+      - run: git add .
+      - run: git commit -m "merging in main"
       - run: rm -rf ./docs
       - run: yarn build
       - run: git add docs
