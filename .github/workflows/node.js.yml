@@ -32,6 +32,8 @@ jobs:
       - run: git config --global user.name "Github Actions"
       - run: git commit -m "Build for gh pages deployment"
       - run: git checkout -b deployment
+      - name: Push to Deployment
+      - continue-on-error: true
       - run: git pull origin deployment
       - run: rm -rf ./docs
       - run: git add .
