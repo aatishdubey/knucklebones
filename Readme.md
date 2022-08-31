@@ -2,9 +2,19 @@
 
 This repo is a dice game inspired by a mini-game called "Knucklebones" in the 2022 video game titled Cult of the Lamb.
 
+## Install Dependencies
+
+<code>yarn</code>
+
 ## Start the dev server
 
 <code>yarn run dev</code>
+
+## Build the app for deployment
+
+Depending on how you serve the files, change the "--base" flag in package.json build script.
+
+<code>yarn build</code>
 
 # Rules
 
