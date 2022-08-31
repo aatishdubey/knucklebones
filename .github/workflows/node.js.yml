@@ -30,9 +30,10 @@ jobs:
       - run: git add docs
       - run: git config --global user.email "atsh_dubey@live.com"
       - run: git config --global user.name "Github Actions"
+      - run: git config pull.rebase false
       - run: git commit -m "Build for gh pages deployment"
       - run: git checkout -b deployment
-      - name: Push to Deployment
+      - name: Pull from Deployment
         continue-on-error: true
         run: git pull origin deployment
       - run: rm -rf ./docs
