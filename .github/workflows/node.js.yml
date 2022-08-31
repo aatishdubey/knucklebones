@@ -31,7 +31,9 @@ jobs:
       - run: git checkout deployment
       - run: git merge main --no-commit
       - run: git add .
-      - run: git commit -m "merging in main"
+      - name: Commit new build to deployment
+        continue-on-error: true
+        run: git commit -m "merging in main"
       - run: rm -rf ./docs
       - run: yarn build
       - run: git add docs
