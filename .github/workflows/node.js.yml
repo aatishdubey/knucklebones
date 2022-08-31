@@ -26,6 +26,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "yarn"
       - run: yarn install --frozen-lockfile
+      - run: rm -rf ./docs
       - run: yarn build
       - run: git add docs
       - run: git config --global user.email "atsh_dubey@live.com"
@@ -36,7 +37,4 @@ jobs:
       - name: Pull from Deployment
         continue-on-error: true
         run: git pull origin deployment
-      - run: rm -rf ./docs
-      - run: git add .
-      - run: git commit -m "removed docs locally"
       - run: git push origin deployment
