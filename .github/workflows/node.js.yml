@@ -34,4 +34,6 @@ jobs:
       - run: git checkout -b deployment
       - run: git pull origin deployment
       - run: rm -rf ./docs
+      - run: git add .
+      - run: git commit -m "removed docs locally"
       - run: git push origin deployment
