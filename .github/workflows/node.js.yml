@@ -6,8 +6,6 @@ name: Node.js CI
 on:
   push:
     branches: ["main"]
-  pull_request:
-    branches: ["main"]
 
 jobs:
   build:
@@ -30,10 +28,8 @@ jobs:
       - run: git config --global user.name "Github Actions"
       - run: git config pull.rebase false
       - run: git pull
-      - run: git checkout -b deployment
-      - name: Pull from Deployment
-        continue-on-error: true
-        run: git pull origin deployment
+      - run: git checkout deployment
+      - run: git merge master
       - run: rm -rf ./docs
       - run: yarn build
       - run: git add docs
